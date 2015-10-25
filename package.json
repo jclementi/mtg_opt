@@ -1,0 +1,22 @@
+{
+  "name": "mtg_opt",
+  "version": "0.0.0",
+  "description": "analysis tool for Magic the Gathering decks and sets",
+  "main": "opt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jclementi/mtg_opt.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/jclementi/mtg_opt/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.3",
+    "jade": "^1.11.0"
+  }
+}
