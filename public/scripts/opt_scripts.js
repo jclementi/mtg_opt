@@ -7,6 +7,8 @@ function request() {
 			return;
 		}
 		console.log(httpRequest);
+		var origins = JSON.parse(httpRequest.response);
+		console.log(origins);
 	};
 }
 var b = document.getElementById("ajaxButton");
