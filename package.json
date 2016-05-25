@@ -16,7 +16,7 @@
     "url": "https://github.com/jclementi/mtg_opt/issues"
   },
   "dependencies": {
-    "express": "~4.13.3",
+    "express": "^4.13.4",
     "jade": "^1.11.0"
   }
 }

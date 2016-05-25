@@ -13,11 +13,11 @@ app.get('/', (req, res) => {
 	res.render('index');
 });
 
-app.get('/origins', (req,res) => {
+app.get('/all_sets', (req,res) => {
 	var options = {
 		root: rootDir
 	};
-	res.sendFile('public/card_data/ori.json', options);
+	res.sendFile('public/card_data/all_sets.json', options);
 });
 
 var server = app.listen(3000, () => {

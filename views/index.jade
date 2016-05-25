@@ -2,7 +2,21 @@ extends ./layout.jade
 
 block main
 	p Improved with css.
-	button(id="ajaxButton") Request Origins
+	button(id="ajaxButton") Request All Cards
 
+	p Set Chooser
+	button(id="prev_set") <
+	button(id="next_set") >
+
+	p Set Data
+	table
+		tr
+			td name
+			td(id="set_name")
+		tr
+			td code
+			td(id="set_code")
 	script(src='scripts/opt_scripts.js')
 	script(src='scripts/util.js')
+
+
