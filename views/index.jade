@@ -16,7 +16,34 @@ block main
 		tr
 			td code
 			td(id="set_code")
+
+	p Card Chooser
+	button(id='prev_card') <
+	button(id='next_card') >
+
+	p Canvas
+	canvas(id='canvas_card' width='200' height='50')
+
+	p Set Canvas
+	div
+		button(id='draw_set') draw whole set
+	div
+		button(id='draw_white') white
+		button(id='draw_blue') blue
+		button(id='draw_black') black
+		button(id='draw_red') red
+		button(id='draw_green') green
+		button(id='draw_colorless') colorless
+	div
+		button(id='draw_artifacts') artifacts
+		button(id='draw_creatures') creatures
+		button(id='draw_enchantments') enchantments
+		button(id='draw_instants') instants
+		button(id='draw_land') land
+		button(id='draw_planeswalkers') planeswalkers
+		button(id='draw_sorceries') sorceries
+
+	canvas(id='canvas_set' width='2400' height='1000')
+
 	script(src='scripts/opt_scripts.js')
 	script(src='scripts/util.js')
-
-
