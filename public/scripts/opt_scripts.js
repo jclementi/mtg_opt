@@ -91,24 +91,51 @@ function update_card(current_card) {
 
 
 /* card and set manipulation
-   add buttons to toggle display for each color and type
-   each button click will trigger a re-draw
+   set parameters for what should be drawn
+   each change will trigger re-drawing the canvas
+
+   colors and other binary attributes can be set to:
+   * require
+   * allow
+   * exclude
+
+   a set of those parametrs for each attribute can be saved and combined with
+   other sets of parameters in 'and' and 'or' combinations
+
+   data structure holds a set of these parameters
    */
 
-/* globals to keep track of what should be drawn */
-draw_white = true;
-draw_blue = true;
-draw_black = true;
-draw_red = true;
-draw_green = true;
-draw_colorless = true;
-draw_artifacts = true;
-draw_creatures = true;
-draw_enchantments = true;
-draw_instants = true;
-draw_land = true;
-draw_planeswalkers = true;
-draw_sorceries = true;
+/* prototype - draw_parameters
+   holds a set of parameters that determine what to draw
+   drawing function uses a set of these joined by 'and/or' to draw the set
+   */
+
+var allow = Symbol("allow");
+var require = Symbol("require");
+var exclude = Symbol("exclude");
+
+var draw_parameters = {
+	white: true;
+	blue: true;
+	black: true;
+	red: true;
+	green: true;
+	colorless: true;
+	artifacts: true;
+	creatures: true;
+	enchantments: true;
+	instants: true;
+	land: true;
+	planeswalkers: true;
+	sorceries: true;
+};
+
+/* draw function will use each one of these to create a subset of the whole set
+   based on 'and' and 'or' joining, it will combine the subsets appropriately
+   once the subsets are all created and joined, it will draw
+   */
+
+/*
 
 /* on clicking each button, update the proper variable, update the set, and redraw
    each toggle function passes a test that the manipulator will use to determine what
